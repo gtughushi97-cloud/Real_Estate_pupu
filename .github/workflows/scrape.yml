@@ -1,0 +1,53 @@
+name: Real Estate Monitor
+
+on:
+  schedule:
+    # თბილისის დრო მუდმივად UTC+4-ია (DST არ აქვს)
+    - cron: "0 20 * * *"  # 00:00 თბილისის დროით (შემდეგი დღე) — გვერდის გასუფთავება
+    - cron: "0 8 * * *"   # 12:00 თბილისის დროით
+    - cron: "0 15 * * *"  # 19:00 თბილისის დროით
+  workflow_dispatch:
+    inputs:
+      run_type:
+        description: "run type (morning / evening / midnight / manual)"
+        required: false
+        default: "manual"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Determine run type
+        id: run_type
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 20 * * *" ]; then
+            echo "value=midnight" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 8 * * *" ]; then
+            echo "value=morning" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 15 * * *" ]; then
+            echo "value=evening" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${{ github.event.inputs.run_type || 'manual' }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run monitor
+        run: python main.py ${{ steps.run_type.outputs.value }}
+
+      - name: Publish updated page
+        run: |
+          git config user.name "real-estate-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/index.html
+          git diff --staged --quiet || git commit -m "Update listings (${{ steps.run_type.outputs.value }})"
+          git push
