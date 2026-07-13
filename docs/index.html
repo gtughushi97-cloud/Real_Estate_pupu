@@ -210,16 +210,983 @@
 <header>
   <h1>🏠 ბინების მონიტორინგი</h1>
   <div class="meta">
-    ბოლო განახლება: <strong>2026-07-13 00:34</strong>
-    <span class="badge">დღის დასაწყისი (00:00) — გასუფთავებულია</span><br />
-    წყაროები: ss.ge, myhome.ge, korter.ge (თბილისი) · ახალი განცხადებები 00:34-დან<br />
+    ბოლო განახლება: <strong>2026-07-13 14:53</strong>
+    <span class="badge">დღის განახლება (12:00)</span><br />
+    წყაროები: ss.ge, myhome.ge, korter.ge (თბილისი) · ახალი განცხადებები 00:00-დან<br />
     ავტომატურად განახლდება 00:00-ზე (გასუფთავება), 12:00-სა და 19:00-ზე
   </div>
 </header>
 
 <main>
-
-<div class="empty">ახალი განცხადება ვერ მოიძებნა.</div>
+<div class="filters">
+  <div>
+    <label for="f-district">რაიონი</label>
+    <select id="f-district">
+      <option value="">ყველა</option>
+      <option value="გლდანი">გლდანი</option>
+<option value="დიდი დიღომი">დიდი დიღომი</option>
+<option value="დიღომი 1-9">დიღომი 1-9</option>
+<option value="ვაკე">ვაკე</option>
+<option value="ვარკეთილი">ვარკეთილი</option>
+<option value="ისანი">ისანი</option>
+<option value="კრწანისი">კრწანისი</option>
+<option value="მთაწმინდა">მთაწმინდა</option>
+<option value="მუხიანი">მუხიანი</option>
+<option value="ნაძალადევი">ნაძალადევი</option>
+<option value="ნუცუბიძის ფერდობი">ნუცუბიძის ფერდობი</option>
+<option value="ორთაჭალა">ორთაჭალა</option>
+<option value="საბურთალო">საბურთალო</option>
+<option value="სამგორი">სამგორი</option>
+    </select>
+  </div>
+  <div>
+    <label for="f-area-min">ფართობი, დან (მ²)</label>
+    <input id="f-area-min" type="number" min="0" placeholder="0" />
+  </div>
+  <div>
+    <label for="f-area-max">ფართობი, მდე (მ²)</label>
+    <input id="f-area-max" type="number" min="0" placeholder="500" />
+  </div>
+  <div>
+    <label for="f-price-min">ფასი, დან ($)</label>
+    <input id="f-price-min" type="number" min="0" placeholder="0" />
+  </div>
+  <div>
+    <label for="f-price-max">ფასი, მდე ($)</label>
+    <input id="f-price-max" type="number" min="0" placeholder="500000" />
+  </div>
+  <div class="reset-wrap">
+    <button id="f-reset" type="button">გასუფთავება</button>
+  </div>
+</div>
+<div class="count">სულ <span id="visible-count">103</span> / 103 განცხადება, დალაგებულია ფართობის ზრდადობით</div><div class="grid"><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/598299" target="_blank" rel="noopener" data-district="მთაწმინდა" data-area="30.0" data-price="47000.0">
+  <div class="top-row">
+    <div class="area">30 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 მთაწმინდა</div>
+  <div class="price">47 000$</div>
+  <div class="psqm">≈ 1 567$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 10/14 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/472282" target="_blank" rel="noopener" data-district="ვაკე" data-area="35.0" data-price="65920.0">
+  <div class="top-row">
+    <div class="area">35 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">65 920$</div>
+  <div class="psqm">≈ 1 883$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 1/7 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/663888" target="_blank" rel="noopener" data-district="საბურთალო" data-area="37.0" data-price="50000.0">
+  <div class="top-row">
+    <div class="area">37 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">50 000$</div>
+  <div class="psqm">≈ 1 351$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 1/13 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/663904" target="_blank" rel="noopener" data-district="საბურთალო" data-area="37.0" data-price="50000.0">
+  <div class="top-row">
+    <div class="area">37 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">50 000$</div>
+  <div class="psqm">≈ 1 351$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 1/13 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/663903" target="_blank" rel="noopener" data-district="საბურთალო" data-area="37.0" data-price="50000.0">
+  <div class="top-row">
+    <div class="area">37 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">50 000$</div>
+  <div class="psqm">≈ 1 351$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 1/13 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/dirsi/572845" target="_blank" rel="noopener" data-district="ისანი" data-area="37.07" data-price="65000.0">
+  <div class="top-row">
+    <div class="area">37.07 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ისანი</div>
+  <div class="price">65 000$</div>
+  <div class="psqm">≈ 1 753$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 6/16 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/583164" target="_blank" rel="noopener" data-district="საბურთალო" data-area="38.0" data-price="58000.0">
+  <div class="top-row">
+    <div class="area">38 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">58 000$</div>
+  <div class="psqm">≈ 1 526$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 4/11 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/615070" target="_blank" rel="noopener" data-district="სამგორი" data-area="40.0" data-price="67000.0">
+  <div class="top-row">
+    <div class="area">40 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 სამგორი</div>
+  <div class="price">67 000$</div>
+  <div class="psqm">≈ 1 675$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 8/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/615053" target="_blank" rel="noopener" data-district="სამგორი" data-area="40.0" data-price="67000.0">
+  <div class="top-row">
+    <div class="area">40 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 სამგორი</div>
+  <div class="price">67 000$</div>
+  <div class="psqm">≈ 1 675$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 8/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/615046" target="_blank" rel="noopener" data-district="სამგორი" data-area="40.0" data-price="67000.0">
+  <div class="top-row">
+    <div class="area">40 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 სამგორი</div>
+  <div class="price">67 000$</div>
+  <div class="psqm">≈ 1 675$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 8/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/didi-dighomi-inn/774052" target="_blank" rel="noopener" data-district="საბურთალო" data-area="42.0" data-price="67000.0">
+  <div class="top-row">
+    <div class="area">42 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">67 000$</div>
+  <div class="psqm">≈ 1 595$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/14 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/avlabari-residence/662136" target="_blank" rel="noopener" data-district="ისანი" data-area="43.0" data-price="107000.0">
+  <div class="top-row">
+    <div class="area">43 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ისანი</div>
+  <div class="price">107 000$</div>
+  <div class="psqm">≈ 2 488$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 4/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/614261" target="_blank" rel="noopener" data-district="საბურთალო" data-area="44.0" data-price="73000.0">
+  <div class="top-row">
+    <div class="area">44 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">73 000$</div>
+  <div class="psqm">≈ 1 659$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/614274" target="_blank" rel="noopener" data-district="საბურთალო" data-area="44.0" data-price="73000.0">
+  <div class="top-row">
+    <div class="area">44 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">73 000$</div>
+  <div class="psqm">≈ 1 659$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/bloki-2/774076" target="_blank" rel="noopener" data-district="გლდანი" data-area="44.0" data-price="78000.0">
+  <div class="top-row">
+    <div class="area">44 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 გლდანი</div>
+  <div class="price">78 000$</div>
+  <div class="psqm">≈ 1 773$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 7/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/759233" target="_blank" rel="noopener" data-district="ვაკე" data-area="45.38" data-price="135000.0">
+  <div class="top-row">
+    <div class="area">45.38 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">135 000$</div>
+  <div class="psqm">≈ 2 975$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/axis-towers/759370" target="_blank" rel="noopener" data-district="ვაკე" data-area="45.5" data-price="245000.0">
+  <div class="top-row">
+    <div class="area">45.5 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">245 000$</div>
+  <div class="psqm">≈ 5 385$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 24/38 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774160" target="_blank" rel="noopener" data-district="მთაწმინდა" data-area="48.0" data-price="109000.0">
+  <div class="top-row">
+    <div class="area">48 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 მთაწმინდა</div>
+  <div class="price">109 000$</div>
+  <div class="psqm">≈ 2 271$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 1/2 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774123" target="_blank" rel="noopener" data-district="საბურთალო" data-area="48.0" data-price="89500.0">
+  <div class="top-row">
+    <div class="area">48 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">89 500$</div>
+  <div class="psqm">≈ 1 865$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/18 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/614428" target="_blank" rel="noopener" data-district="კრწანისი" data-area="50.0" data-price="102000.0">
+  <div class="top-row">
+    <div class="area">50 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">102 000$</div>
+  <div class="psqm">≈ 2 040$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/614425" target="_blank" rel="noopener" data-district="კრწანისი" data-area="50.0" data-price="102000.0">
+  <div class="top-row">
+    <div class="area">50 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">102 000$</div>
+  <div class="psqm">≈ 2 040$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/614386" target="_blank" rel="noopener" data-district="კრწანისი" data-area="50.0" data-price="102000.0">
+  <div class="top-row">
+    <div class="area">50 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">102 000$</div>
+  <div class="psqm">≈ 2 040$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/594572" target="_blank" rel="noopener" data-district="საბურთალო" data-area="50.0" data-price="107000.0">
+  <div class="top-row">
+    <div class="area">50 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">107 000$</div>
+  <div class="psqm">≈ 2 140$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 4/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774066" target="_blank" rel="noopener" data-district="საბურთალო" data-area="50.3" data-price="86000.0">
+  <div class="top-row">
+    <div class="area">50.3 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">86 000$</div>
+  <div class="psqm">≈ 1 710$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 5/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36129646" target="_blank" rel="noopener" data-district="დიდი დიღომი" data-area="51.0" data-price="73000">
+  <div class="top-row">
+    <div class="area">51 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 დიდი დიღომი</div>
+  <div class="price">73 000$</div>
+  <div class="psqm">≈ 1 431$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 12/13 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/753875" target="_blank" rel="noopener" data-district="საბურთალო" data-area="51.0" data-price="65000.0">
+  <div class="top-row">
+    <div class="area">51 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">65 000$</div>
+  <div class="psqm">≈ 1 275$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 4/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/house-uni/774122" target="_blank" rel="noopener" data-district="ვაკე" data-area="51.0" data-price="140000.0">
+  <div class="top-row">
+    <div class="area">51 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">140 000$</div>
+  <div class="psqm">≈ 2 745$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 4/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/house-uni/759194" target="_blank" rel="noopener" data-district="ვაკე" data-area="51.4" data-price="134000.0">
+  <div class="top-row">
+    <div class="area">51.4 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">134 000$</div>
+  <div class="psqm">≈ 2 607$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/594558" target="_blank" rel="noopener" data-district="საბურთალო" data-area="52.0" data-price="115000.0">
+  <div class="top-row">
+    <div class="area">52 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">115 000$</div>
+  <div class="psqm">≈ 2 212$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/594562" target="_blank" rel="noopener" data-district="საბურთალო" data-area="52.0" data-price="115000.0">
+  <div class="top-row">
+    <div class="area">52 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">115 000$</div>
+  <div class="psqm">≈ 2 212$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/metra-park-bagebi/774174" target="_blank" rel="noopener" data-district="ვაკე" data-area="52.0" data-price="109000.0">
+  <div class="top-row">
+    <div class="area">52 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">109 000$</div>
+  <div class="psqm">≈ 2 096$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 1/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/park-side-didi-dighomi/424646" target="_blank" rel="noopener" data-district="საბურთალო" data-area="52.2" data-price="65250.0">
+  <div class="top-row">
+    <div class="area">52.2 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">65 250$</div>
+  <div class="psqm">≈ 1 250$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 15/17 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/714350" target="_blank" rel="noopener" data-district="კრწანისი" data-area="53.0" data-price="88200.0">
+  <div class="top-row">
+    <div class="area">53 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">88 200$</div>
+  <div class="psqm">≈ 1 664$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 10/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774095" target="_blank" rel="noopener" data-district="საბურთალო" data-area="53.6" data-price="84000.0">
+  <div class="top-row">
+    <div class="area">53.6 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">84 000$</div>
+  <div class="psqm">≈ 1 567$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 6/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36129188" target="_blank" rel="noopener" data-district="დიდი დიღომი" data-area="54.0" data-price="83000">
+  <div class="top-row">
+    <div class="area">54 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 დიდი დიღომი</div>
+  <div class="price">83 000$</div>
+  <div class="psqm">≈ 1 537$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 2/8 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36128995" target="_blank" rel="noopener" data-district="გლდანი" data-area="54.0" data-price="89000">
+  <div class="top-row">
+    <div class="area">54 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 გლდანი</div>
+  <div class="price">89 000$</div>
+  <div class="psqm">≈ 1 648$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 10/10 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/771637" target="_blank" rel="noopener" data-district="საბურთალო" data-area="54.0" data-price="83000.0">
+  <div class="top-row">
+    <div class="area">54 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">83 000$</div>
+  <div class="psqm">≈ 1 537$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 2/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/park-side-didi-dighomi/714795" target="_blank" rel="noopener" data-district="საბურთალო" data-area="54.4" data-price="63104.0">
+  <div class="top-row">
+    <div class="area">54.4 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">63 104$</div>
+  <div class="psqm">≈ 1 160$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 14/17 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/house-uni/759202" target="_blank" rel="noopener" data-district="ვაკე" data-area="54.6" data-price="136000.0">
+  <div class="top-row">
+    <div class="area">54.6 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">136 000$</div>
+  <div class="psqm">≈ 2 491$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 5/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/monolith-city/91683" target="_blank" rel="noopener" data-district="კრწანისი" data-area="54.8" data-price="85000.0">
+  <div class="top-row">
+    <div class="area">54.8 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">85 000$</div>
+  <div class="psqm">≈ 1 551$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 10/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/767737" target="_blank" rel="noopener" data-district="საბურთალო" data-area="55.0" data-price="75000.0">
+  <div class="top-row">
+    <div class="area">55 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">75 000$</div>
+  <div class="psqm">≈ 1 364$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 2/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/609417" target="_blank" rel="noopener" data-district="ვაკე" data-area="55.0" data-price="150000.0">
+  <div class="top-row">
+    <div class="area">55 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">150 000$</div>
+  <div class="psqm">≈ 2 727$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36131962" target="_blank" rel="noopener" data-district="დიღომი 1-9" data-area="56.0" data-price="105000">
+  <div class="top-row">
+    <div class="area">56 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 დიღომი 1-9</div>
+  <div class="price">105 000$</div>
+  <div class="psqm">≈ 1 875$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 10/13 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774006" target="_blank" rel="noopener" data-district="საბურთალო" data-area="56.0" data-price="75000.0">
+  <div class="top-row">
+    <div class="area">56 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">75 000$</div>
+  <div class="psqm">≈ 1 339$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 7/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/krtsanisi-twins/147368" target="_blank" rel="noopener" data-district="კრწანისი" data-area="58.0" data-price="115000.0">
+  <div class="top-row">
+    <div class="area">58 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">115 000$</div>
+  <div class="psqm">≈ 1 983$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 5/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/m2-at-nutsubidze-2/759243" target="_blank" rel="noopener" data-district="ვაკე" data-area="58.7" data-price="148000.0">
+  <div class="top-row">
+    <div class="area">58.7 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">148 000$</div>
+  <div class="psqm">≈ 2 521$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 25/26 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36131079" target="_blank" rel="noopener" data-district="დიდი დიღომი" data-area="60.0" data-price="80000">
+  <div class="top-row">
+    <div class="area">60 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 დიდი დიღომი</div>
+  <div class="price">80 000$</div>
+  <div class="psqm">≈ 1 333$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 12/12 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36128938" target="_blank" rel="noopener" data-district="საბურთალო" data-area="60.0" data-price="90000">
+  <div class="top-row">
+    <div class="area">60 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">90 000$</div>
+  <div class="psqm">≈ 1 500$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 4/11 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/751998" target="_blank" rel="noopener" data-district="საბურთალო" data-area="60.0" data-price="90900.0">
+  <div class="top-row">
+    <div class="area">60 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">90 900$</div>
+  <div class="psqm">≈ 1 515$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 12/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/640502" target="_blank" rel="noopener" data-district="ვაკე" data-area="60.0" data-price="135000.0">
+  <div class="top-row">
+    <div class="area">60 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">135 000$</div>
+  <div class="psqm">≈ 2 250$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/20 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/472189" target="_blank" rel="noopener" data-district="ვაკე" data-area="60.0" data-price="129600.0">
+  <div class="top-row">
+    <div class="area">60 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">129 600$</div>
+  <div class="psqm">≈ 2 160$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 6/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36128979" target="_blank" rel="noopener" data-district="ორთაჭალა" data-area="61.0" data-price="116000">
+  <div class="top-row">
+    <div class="area">61 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ორთაჭალა</div>
+  <div class="price">116 000$</div>
+  <div class="psqm">≈ 1 902$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 6/8 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/monolith-green-city/723886" target="_blank" rel="noopener" data-district="კრწანისი" data-area="62.0" data-price="125000.0">
+  <div class="top-row">
+    <div class="area">62 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">125 000$</div>
+  <div class="psqm">≈ 2 016$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 11/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/blox-krtsanisi/471065" target="_blank" rel="noopener" data-district="კრწანისი" data-area="62.0" data-price="124000.0">
+  <div class="top-row">
+    <div class="area">62 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">124 000$</div>
+  <div class="psqm">≈ 2 000$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 2/4 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774224" target="_blank" rel="noopener" data-district="საბურთალო" data-area="63.0" data-price="112000.0">
+  <div class="top-row">
+    <div class="area">63 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">112 000$</div>
+  <div class="psqm">≈ 1 778$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 13/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774170" target="_blank" rel="noopener" data-district="საბურთალო" data-area="64.0" data-price="102400.0">
+  <div class="top-row">
+    <div class="area">64 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">102 400$</div>
+  <div class="psqm">≈ 1 600$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 12/14 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774112" target="_blank" rel="noopener" data-district="საბურთალო" data-area="64.0" data-price="115000.0">
+  <div class="top-row">
+    <div class="area">64 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">115 000$</div>
+  <div class="psqm">≈ 1 797$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 4/11 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/603144" target="_blank" rel="noopener" data-district="საბურთალო" data-area="64.0" data-price="154000.0">
+  <div class="top-row">
+    <div class="area">64 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">154 000$</div>
+  <div class="psqm">≈ 2 406$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 11/21 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/white-square-shartava/475052" target="_blank" rel="noopener" data-district="საბურთალო" data-area="65.0" data-price="106400.0">
+  <div class="top-row">
+    <div class="area">65 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">106 400$</div>
+  <div class="psqm">≈ 1 637$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/18 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/482924" target="_blank" rel="noopener" data-district="კრწანისი" data-area="65.0" data-price="105600.0">
+  <div class="top-row">
+    <div class="area">65 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">105 600$</div>
+  <div class="psqm">≈ 1 625$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/green-alley/774115" target="_blank" rel="noopener" data-district="საბურთალო" data-area="65.0" data-price="108150.0">
+  <div class="top-row">
+    <div class="area">65 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">108 150$</div>
+  <div class="psqm">≈ 1 664$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 11/14 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/759189" target="_blank" rel="noopener" data-district="ვაკე" data-area="65.9" data-price="190000.0">
+  <div class="top-row">
+    <div class="area">65.9 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">190 000$</div>
+  <div class="psqm">≈ 2 883$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 2/5 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36128753" target="_blank" rel="noopener" data-district="საბურთალო" data-area="69.0" data-price="234000">
+  <div class="top-row">
+    <div class="area">69 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">234 000$</div>
+  <div class="psqm">≈ 3 391$ / მ²</div>
+  <div class="details"><span>1 ოთახი · 7/31 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/603355" target="_blank" rel="noopener" data-district="საბურთალო" data-area="69.0" data-price="150000.0">
+  <div class="top-row">
+    <div class="area">69 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">150 000$</div>
+  <div class="psqm">≈ 2 174$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 4/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/b-home/725483" target="_blank" rel="noopener" data-district="ვაკე" data-area="69.6" data-price="163000.0">
+  <div class="top-row">
+    <div class="area">69.6 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">163 000$</div>
+  <div class="psqm">≈ 2 342$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 3/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774025" target="_blank" rel="noopener" data-district="საბურთალო" data-area="70.78" data-price="110000.0">
+  <div class="top-row">
+    <div class="area">70.78 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">110 000$</div>
+  <div class="psqm">≈ 1 554$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 7/10 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774212" target="_blank" rel="noopener" data-district="ნაძალადევი" data-area="74.1" data-price="135000.0">
+  <div class="top-row">
+    <div class="area">74.1 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ნაძალადევი</div>
+  <div class="price">135 000$</div>
+  <div class="psqm">≈ 1 822$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 7/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774207" target="_blank" rel="noopener" data-district="ნაძალადევი" data-area="74.1" data-price="135000.0">
+  <div class="top-row">
+    <div class="area">74.1 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ნაძალადევი</div>
+  <div class="price">135 000$</div>
+  <div class="psqm">≈ 1 822$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 7/11 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36129256" target="_blank" rel="noopener" data-district="მუხიანი" data-area="75.0" data-price="77000">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 მუხიანი</div>
+  <div class="price">77 000$</div>
+  <div class="psqm">≈ 1 027$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 16/17 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/773772" target="_blank" rel="noopener" data-district="გლდანი" data-area="75.0" data-price="77000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 გლდანი</div>
+  <div class="price">77 000$</div>
+  <div class="psqm">≈ 1 027$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 16/17 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/473157" target="_blank" rel="noopener" data-district="ვაკე" data-area="75.0" data-price="148000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">148 000$</div>
+  <div class="psqm">≈ 1 973$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 18/18 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/472213" target="_blank" rel="noopener" data-district="საბურთალო" data-area="75.0" data-price="92000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">92 000$</div>
+  <div class="psqm">≈ 1 227$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 3/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/dirsi/773859" target="_blank" rel="noopener" data-district="ისანი" data-area="75.0" data-price="107000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ისანი</div>
+  <div class="price">107 000$</div>
+  <div class="psqm">≈ 1 427$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 19/23 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/474341" target="_blank" rel="noopener" data-district="ვაკე" data-area="75.0" data-price="216000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">216 000$</div>
+  <div class="psqm">≈ 2 880$ / მ²</div>
+  <div class="details"><span>2 ოთახი · 4/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/663925" target="_blank" rel="noopener" data-district="სამგორი" data-area="75.0" data-price="100000.0">
+  <div class="top-row">
+    <div class="area">75 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 სამგორი</div>
+  <div class="price">100 000$</div>
+  <div class="psqm">≈ 1 333$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 1/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/743303" target="_blank" rel="noopener" data-district="საბურთალო" data-area="77.0" data-price="85000.0">
+  <div class="top-row">
+    <div class="area">77 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">85 000$</div>
+  <div class="psqm">≈ 1 104$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 4/11 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774198" target="_blank" rel="noopener" data-district="ვაკე" data-area="77.5" data-price="215000.0">
+  <div class="top-row">
+    <div class="area">77.5 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">215 000$</div>
+  <div class="psqm">≈ 2 774$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 1/15 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/green-diamond/766641" target="_blank" rel="noopener" data-district="საბურთალო" data-area="79.0" data-price="93000.0">
+  <div class="top-row">
+    <div class="area">79 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">93 000$</div>
+  <div class="psqm">≈ 1 177$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 9/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774121" target="_blank" rel="noopener" data-district="საბურთალო" data-area="80.0" data-price="160000.0">
+  <div class="top-row">
+    <div class="area">80 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">160 000$</div>
+  <div class="psqm">≈ 2 000$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 4/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/green-diamond/627993" target="_blank" rel="noopener" data-district="საბურთალო" data-area="80.0" data-price="124000.0">
+  <div class="top-row">
+    <div class="area">80 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">124 000$</div>
+  <div class="psqm">≈ 1 550$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 5/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/nucubidze-garden/742854" target="_blank" rel="noopener" data-district="ვაკე" data-area="80.0" data-price="155000.0">
+  <div class="top-row">
+    <div class="area">80 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">155 000$</div>
+  <div class="psqm">≈ 1 938$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 5/13 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/axis-towers/774197" target="_blank" rel="noopener" data-district="ვაკე" data-area="82.0" data-price="470000.0">
+  <div class="top-row">
+    <div class="area">82 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">470 000$</div>
+  <div class="psqm">≈ 5 732$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 26/38 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/jeu-estate-digomi/774107" target="_blank" rel="noopener" data-district="საბურთალო" data-area="89.1" data-price="141000.0">
+  <div class="top-row">
+    <div class="area">89.1 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">141 000$</div>
+  <div class="psqm">≈ 1 582$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 2/11 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774234" target="_blank" rel="noopener" data-district="ვაკე" data-area="90.0" data-price="120000.0">
+  <div class="top-row">
+    <div class="area">90 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">120 000$</div>
+  <div class="psqm">≈ 1 333$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 2/2 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://www.myhome.ge/en/real-estate/25266677/" target="_blank" rel="noopener" data-district="ვარკეთილი" data-area="90.3" data-price="135000">
+  <div class="top-row">
+    <div class="area">90.3 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვარკეთილი</div>
+  <div class="price">135 000$</div>
+  <div class="psqm">≈ 1 495$ / მ²</div>
+  <div class="details"><span>ოთახები N/A · 2/10 სართ.</span><span>myhome.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/bloki-2/766503" target="_blank" rel="noopener" data-district="ვაკე" data-area="93.0" data-price="160000.0">
+  <div class="top-row">
+    <div class="area">93 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">160 000$</div>
+  <div class="psqm">≈ 1 720$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 3/14 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/609368" target="_blank" rel="noopener" data-district="ვაკე" data-area="95.0" data-price="175000.0">
+  <div class="top-row">
+    <div class="area">95 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">175 000$</div>
+  <div class="psqm">≈ 1 842$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 15/17 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/archi-kavtaradze/609261" target="_blank" rel="noopener" data-district="ვაკე" data-area="95.0" data-price="210000.0">
+  <div class="top-row">
+    <div class="area">95 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">210 000$</div>
+  <div class="psqm">≈ 2 211$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 15/16 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36133606" target="_blank" rel="noopener" data-district="ნუცუბიძის ფერდობი" data-area="100.0" data-price="">
+  <div class="top-row">
+    <div class="area">100 მ²</div>
+    <span class="market-tag unknown">მონაცემი არასაკმარისია</span>
+  </div>
+  <div class="district">📍 ნუცუბიძის ფერდობი</div>
+  <div class="price">ფასი შეთანხმებით</div>
+  <div class="psqm"></div>
+  <div class="details"><span>1 ოთახი · 7/12 სართ.</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/1-seqtori/773999" target="_blank" rel="noopener" data-district="ვაკე" data-area="100.0" data-price="200000.0">
+  <div class="top-row">
+    <div class="area">100 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">200 000$</div>
+  <div class="psqm">≈ 2 000$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 15/19 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/park-ortachala/716817" target="_blank" rel="noopener" data-district="კრწანისი" data-area="102.0" data-price="195000.0">
+  <div class="top-row">
+    <div class="area">102 მ²</div>
+    <span class="market-tag market">საბაზრო ფასი</span>
+  </div>
+  <div class="district">📍 კრწანისი</div>
+  <div class="price">195 000$</div>
+  <div class="psqm">≈ 1 912$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 7/16 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/741442" target="_blank" rel="noopener" data-district="საბურთალო" data-area="103.0" data-price="210000.0">
+  <div class="top-row">
+    <div class="area">103 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">210 000$</div>
+  <div class="psqm">≈ 2 039$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 4/6 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/white-square-shartava/725480" target="_blank" rel="noopener" data-district="საბურთალო" data-area="111.9" data-price="280000.0">
+  <div class="top-row">
+    <div class="area">111.9 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">280 000$</div>
+  <div class="psqm">≈ 2 502$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 29/37 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/white-square-shartava/759240" target="_blank" rel="noopener" data-district="საბურთალო" data-area="111.9" data-price="268000.0">
+  <div class="top-row">
+    <div class="area">111.9 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">268 000$</div>
+  <div class="psqm">≈ 2 395$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 25/37 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/774110" target="_blank" rel="noopener" data-district="გლდანი" data-area="113.0" data-price="214700.0">
+  <div class="top-row">
+    <div class="area">113 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 გლდანი</div>
+  <div class="price">214 700$</div>
+  <div class="psqm">≈ 1 900$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 2/20 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/archi-nutsubidze/612341" target="_blank" rel="noopener" data-district="ვაკე" data-area="140.0" data-price="150000.0">
+  <div class="top-row">
+    <div class="area">140 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">150 000$</div>
+  <div class="psqm">≈ 1 071$ / მ²</div>
+  <div class="details"><span>5 ოთახი · 6/9 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/768258" target="_blank" rel="noopener" data-district="გლდანი" data-area="156.0" data-price="140000.0">
+  <div class="top-row">
+    <div class="area">156 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 გლდანი</div>
+  <div class="price">140 000$</div>
+  <div class="psqm">≈ 897$ / მ²</div>
+  <div class="details"><span>3 ოთახი · 8/8 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/ocean-vake-park/774158" target="_blank" rel="noopener" data-district="ვაკე" data-area="158.0" data-price="671000.0">
+  <div class="top-row">
+    <div class="area">158 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">671 000$</div>
+  <div class="psqm">≈ 4 247$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 5/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://home.ss.ge/ka/real-estate/l-36132244" target="_blank" rel="noopener" data-district="საბურთალო" data-area="165.0" data-price="500000">
+  <div class="top-row">
+    <div class="area">165 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">500 000$</div>
+  <div class="psqm">≈ 3 030$ / მ²</div>
+  <div class="details"><span>ოთახები N/A</span><span>ss.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/lisi-green-town/737981" target="_blank" rel="noopener" data-district="საბურთალო" data-area="168.0" data-price="700000.0">
+  <div class="top-row">
+    <div class="area">168 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 საბურთალო</div>
+  <div class="price">700 000$</div>
+  <div class="psqm">≈ 4 167$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 5/5 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/471121" target="_blank" rel="noopener" data-district="ვაკე" data-area="180.0" data-price="288000.0">
+  <div class="top-row">
+    <div class="area">180 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">288 000$</div>
+  <div class="psqm">≈ 1 600$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 8/12 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/hilltop-green/725479" target="_blank" rel="noopener" data-district="მთაწმინდა" data-area="193.67" data-price="521000.0">
+  <div class="top-row">
+    <div class="area">193.67 მ²</div>
+    <span class="market-tag high">📈 მაღალი ფასი</span>
+  </div>
+  <div class="district">📍 მთაწმინდა</div>
+  <div class="price">521 000$</div>
+  <div class="psqm">≈ 2 690$ / მ²</div>
+  <div class="details"><span>4 ოთახი · 1/7 სართ.</span><span>korter.ge</span></div>
+</a><a class="card" href="https://korter.ge/binebis-yidva-gayidva-tbilisi/472252" target="_blank" rel="noopener" data-district="ვაკე" data-area="230.0" data-price="352000.0">
+  <div class="top-row">
+    <div class="area">230 მ²</div>
+    <span class="market-tag low">📉 დაბალი ფასი</span>
+  </div>
+  <div class="district">📍 ვაკე</div>
+  <div class="price">352 000$</div>
+  <div class="psqm">≈ 1 530$ / მ²</div>
+  <div class="details"><span>7 ოთახი · 5/12 სართ.</span><span>korter.ge</span></div>
+</a></div>
 </main>
 <footer>დემო/პირადი გამოყენებისთვის · მონაცემები არ ინახება წინა დღეებიდან · ფასი საბაზროსთან შედარებულია რაიონის მედიანურ მ²-ფასთან</footer>
 <script>
